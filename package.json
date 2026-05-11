@@ -1,0 +1,25 @@
+{
+  "name": "odin-mini-message-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheDS1337/odin-mini-message-board.git"
+  },
+  "keywords": [],
+  "author": "Mohamed Amine Boussoubel <aboussoubel@gmail.com>",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/TheDS1337/odin-mini-message-board/issues"
+  },
+  "homepage": "https://github.com/TheDS1337/odin-mini-message-board#readme",
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1"
+  }
+}
