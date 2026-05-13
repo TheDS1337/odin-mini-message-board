@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <title>Mini Messageboard</title>
+</head>
+<body>
+    <% messages.forEach(msg => { %>
+        <div>
+            <p>Message from: <%= msg.user %></p>
+            <p>Content: <%= msg.text %></p>
+            <p>received at: <%= msg.added.toLocaleString() %></p>
+        </div>
+    <br>
+    <% }); %>
+</body>
+</html>
