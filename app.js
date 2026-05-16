@@ -39,6 +39,18 @@ app.post("/new", (req, res) => {
   res.redirect("/");
 });
 
+app.get("/message", (req, res) => {
+  const msgIdx = req.query.index;
+
+  if( msgIdx < 0 || msgIdx >= messages.length ) {
+    res.status(404);
+    res.send("This message does not exist");
+    return;
+  }
+
+  res.render("index", { page: "body-message", data: { ...messages[msgIdx] } });
+});
+
 app.listen(PORT, HOST, (error) => {
   if( error )
     throw error;

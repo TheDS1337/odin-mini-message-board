@@ -2,12 +2,8 @@
     <div id="today-msg">Today's messages....</div>
 
     <div>
-        <% messages.forEach(msg => { %>
-        <div>
-            <p>From: <%= msg.user %></p>
-            <p>Content: <%= msg.text %></p>
-            <p>received at: <%= msg.added.toLocaleString() %></p>
-        </div>
+        <% messages.forEach((msg, idx) => { %>
+        <a href=<%= `/message?index=${idx}`%>>Message from <%= msg.user %></a>
         <br>
         <% }); %>
     </div>
