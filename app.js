@@ -25,16 +25,18 @@ app.use(express.static(path.join(import.meta.dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.render("index", { messages: messages });
+  res.render("index", { page: "body-main", data: { messages } });
 });
 
 app.get("/new", (req, res) => {
-  res.render("form");
+  res.render("index", { page: "body-form", data: {} } );
 });
 
 app.post("/new", (req, res) => {
   messages.push({ text: req.body.text, user: req.body.user, added: new Date() });
-  res.render("index", { messages: messages });
+
+  // Redirect the client back to the main page
+  res.redirect("/");
 });
 
 app.listen(PORT, HOST, (error) => {

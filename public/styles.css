@@ -15,3 +15,26 @@ form > div {
     display: flex;
     flex-direction: column;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    padding-top: 100px;
+    flex: 1;
+}
+
+footer {
+    padding-bottom: 50px;
+    flex-shrink: 0;
+}
+
+#today-msg {
+    text-align: center;
+    padding-bottom: 25px;
+}

@@ -1,0 +1,18 @@
+<main>
+    <div id="today-msg">Today's messages....</div>
+
+    <div>
+        <% messages.forEach(msg => { %>
+        <div>
+            <p>From: <%= msg.user %></p>
+            <p>Content: <%= msg.text %></p>
+            <p>received at: <%= msg.added.toLocaleString() %></p>
+        </div>
+        <br>
+        <% }); %>
+    </div>
+</main>
+
+<footer>
+    <a href="/new">Write</a> a new message
+</footer>
